@@ -25,8 +25,8 @@ public class ApiController {
         return BasicRespond.getOrdersSuccess(new ArrayList<>());
     }
 
-    @RequestMapping(method = RequestMethod.PATCH, path = "/orders/{id}")
-    public Object updateOrder(@PathParam("id") Long id) {
+    @RequestMapping(method = RequestMethod.GET, path = "/orders/{id}")
+    public Object updateOrder(@PathVariable(name = "id") Long id) {
         System.out.println(id);
 
         return BasicRespond.getOrdersSuccess(new ArrayList<>());
